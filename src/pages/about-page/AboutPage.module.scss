@@ -3,32 +3,66 @@
 .about {
   flex-grow: 1;
   .aboutContainer {
-    p {
-      margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    .aboutArticle {
+      p {
+        margin-bottom: 20px;
+        max-width: 70%;
+      }
     }
-    img {
-      display: none;
+    .portrait {
+      width: 365px;
     }
   }
 }
 
 @include mq(laptop-l) {
+  .about {
+    .aboutContainer {
+      .aboutArticle {
+        p {
+          max-width: fit-content;
+        }
+      }
+
+      .portrait {
+        display: none;
+      }
+    }
+  }
 }
 
 @include mq(tablet) {
   .about {
     .aboutContainer {
-      p {
+      display: flex;
+      flex-direction: column;
+      .aboutArticle {
+        p {
+        }
       }
-      img {
+
+      .portrait {
         display: block;
-        // width: 430px;
         margin: auto;
-        height: 541px;
       }
     }
   }
 }
 
 @include mq(mobile) {
+  .about {
+    .aboutContainer {
+      .aboutArticle {
+        p {
+        }
+      }
+
+      .portrait {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
 }
