@@ -1,0 +1,122 @@
+@use "../../styles/variables" as var;
+@use "../../styles/media-breackpoints" as *;
+
+.header {
+  // background-color: var.$color-background;
+  height: 206px;
+  display: flex;
+  align-items: center;
+  .headerContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-family: "Londrina Solid";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 32px;
+        letter-spacing: -1px;
+        line-height: 26px;
+        color: var.$text-headings;
+        .accent {
+          color: var.$color-brand !important;
+        }
+      }
+    }
+
+    nav {
+      margin-top: 11px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        gap: 41px;
+        li {
+          font-family: "Londrina Solid";
+          font-weight: normal;
+          font-style: normal;
+          font-size: 32px;
+          letter-spacing: -1px;
+          line-height: 26px;
+          a {
+            color: var.$text-headings;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            cursor: pointer;
+          }
+
+          a:after {
+            content: " ";
+            display: block;
+            transition: all 0.3s ease-in-out;
+            height: 0px;
+            background-color: var.$color-brand;
+            width: 0;
+          }
+
+          a:hover:after {
+            content: " ";
+            display: block;
+            width: 100%;
+            height: 3px;
+          }
+        }
+      }
+    }
+    .wa {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 7px;
+
+      img {
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+@include mq(laptop) {
+}
+
+@include mq(tablet) {
+  .header {
+    .headerContainer {
+      flex-direction: column;
+
+      .logo {
+        span {
+          .accent {
+          }
+        }
+      }
+
+      nav {
+        margin-top: 10px;
+        padding: 10px 0;
+        ul {
+          li {
+            font-size: 18px;
+
+            a {
+            }
+          }
+        }
+      }
+      .wa {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mq(mobile) {
+}

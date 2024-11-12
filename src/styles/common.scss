@@ -1,0 +1,184 @@
+@use "./variables" as var;
+
+:root {
+  // --getter-x: 10px;
+  // overflow: hidden;
+  background-color: var.$color-background;
+}
+
+body {
+  font-family: "Roboto";
+  color: var.$text-typography;
+  font-size: 1rem;
+}
+
+// custom scrollbar
+
+/* width */
+::-webkit-scrollbar {
+  // width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  // background: $color_primary;
+  // border-radius: 10px 0 0 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  // background: $color_primary;
+}
+
+// custom scrollbar END
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: var(--getter-x, 0.75rem);
+  padding-left: var(--getter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// typography
+
+.text-muted {
+  color: var.$text-muted;
+  font-weight: 400;
+  font-family: "Inter";
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: -1px;
+}
+
+.brand-color {
+  color: var.$color-brand;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var.$text-typography;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0px;
+}
+
+.signature {
+  font-family: "Island Moments";
+  color: var.$text-typography;
+  font-size: 35px;
+  // line-height: 20px;
+  letter-spacing: -1px;
+  display: block;
+  margin: 40px 0;
+}
+
+h1 {
+  color: var.$text-muted;
+  font-family: "Inter";
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 87px;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 999;
+}
+
+h2 {
+  color: var.$text-headings;
+  font-family: "Inter";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 87px;
+  letter-spacing: -1px;
+}
+
+h3 {
+  color: var.$text-headings;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -1px;
+}
+
+._anim-item {
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+._anim-item-left {
+  transform: translate(-20%, 0);
+}
+._anim-item-right {
+  transform: translate(20%, 0);
+}
+
+._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #1d1d1f inset !important;
+  -webkit-text-fill-color: #838383 !important;
+  // color: #838383;
+}
+
+@media (min-width: 320px) {
+  .container {
+    width: auto;
+    max-width: none;
+  }
+}
+
+@media (min-width: 425px) {
+  .container {
+    max-width: 330px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1157px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+    line-height: 52px;
+  }
+}

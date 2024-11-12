@@ -1,0 +1,72 @@
+@use "../../styles/variables" as var;
+@use "../../styles/media-breackpoints" as *;
+
+.home {
+  height: calc(100vh - 206px - 55px);
+  overflow: hidden;
+
+  .homeContainer {
+    position: relative;
+    z-index: 2;
+    .homeBgText {
+      position: absolute;
+      z-index: -1;
+      font-family: "Londrina Solid";
+      font-weight: 400;
+      font-size: 400px;
+      text-transform: uppercase;
+      color: #212121;
+      left: -95px;
+      top: -40px;
+    }
+    .heroText {
+      padding-top: 152px;
+    }
+
+    .portrait {
+      height: 80vh;
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+  }
+}
+
+@include mq(laptop-l) {
+}
+
+@include mq(tablet) {
+  .home {
+    .homeContainer {
+      .homeBgText {
+        display: none;
+      }
+      .heroText {
+        padding-top: 130px;
+        font-size: 50px;
+        width: max-content;
+      }
+
+      .portrait {
+        z-index: -1;
+        left: 40%;
+        height: 80vh;
+      }
+    }
+  }
+}
+
+@include mq(mobile) {
+  .home {
+    .homeContainer {
+      .homeBgText {
+      }
+      .heroText {
+      }
+
+      .portrait {
+        left: 40%;
+      }
+    }
+  }
+}

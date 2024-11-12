@@ -1,0 +1,11 @@
+@use "./styles/" as stylesheet;
+@use "./styles/variables" as var;
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.nav-link.active {
+  color: var.$color-brand !important;
+}

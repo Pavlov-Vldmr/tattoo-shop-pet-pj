@@ -1,0 +1,10 @@
+@use "./variables" as var;
+@mixin mq($breackpoint, $breackpoints: var.$media_breackpoints) {
+  @if map-has-key($breackpoints, $breackpoint) {
+    $breackpoint: map-get($breackpoints, $breackpoint);
+  }
+
+  @media (max-width: #{$breackpoint}) {
+    @content;
+  }
+}

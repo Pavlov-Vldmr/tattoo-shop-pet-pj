@@ -1,0 +1,34 @@
+@use "../../styles/media-breackpoints" as *;
+
+.about {
+  flex-grow: 1;
+  .aboutContainer {
+    p {
+      margin-bottom: 20px;
+    }
+    img {
+      display: none;
+    }
+  }
+}
+
+@include mq(laptop-l) {
+}
+
+@include mq(tablet) {
+  .about {
+    .aboutContainer {
+      p {
+      }
+      img {
+        display: block;
+        // width: 430px;
+        margin: auto;
+        height: 541px;
+      }
+    }
+  }
+}
+
+@include mq(mobile) {
+}

@@ -1,0 +1,77 @@
+@use "../../styles/media-breackpoints" as *;
+
+.services {
+  flex-grow: 1;
+  // height: calc(100vh - 206px - 55px);
+
+  .servicesContainer {
+    .servicesArticle {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 79px;
+      margin-top: 45px;
+      .servicesArticleItem {
+        display: flex;
+        flex-direction: column;
+        p {
+          margin-top: 26px;
+        }
+      }
+    }
+  }
+}
+
+@include mq(laptop-l) {
+  .services {
+    // height: fit-content;
+
+    .servicesContainer {
+      display: flex;
+      margin-bottom: 40px;
+      flex-direction: column;
+      align-items: center;
+      .servicesArticle {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        .servicesArticleItem {
+          p {
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(tablet) {
+  .services {
+    // display: none;
+    // height: fit-content;
+
+    .servicesContainer {
+      .servicesArticle {
+        width: 300px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        // grid-template-columns: repeat(4, 1fr);
+
+        gap: 40px;
+        margin-top: 45px;
+        .servicesArticleItem {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          p {
+            margin-top: 26px;
+            text-align: center;
+            padding: 0 38px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(mobile) {
+}

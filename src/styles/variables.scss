@@ -1,0 +1,25 @@
+:root {
+  // --getter-x: 10px;
+}
+
+$text_color: #fa0000;
+
+$text-headings: #ffffff;
+$text-typography: #cccccc;
+$text-muted: #636363;
+
+$color-brand: #ffd911;
+$color-background: #191919;
+$color-footer-background: #161616;
+
+$default-font: "Inter";
+
+// $media-breackpoints: ("desktop": 1920px, "laptop": 1367px, "tablet": 1024px, "mobile": 767px);
+$media-breackpoints: (
+  "desctop": 1400px,
+  "laptop-l": 1200px,
+  "tablet-l": 992px,
+  "tablet": 768px,
+  "mobile-l": 425px,
+  "mobile-s": 375px,
+);

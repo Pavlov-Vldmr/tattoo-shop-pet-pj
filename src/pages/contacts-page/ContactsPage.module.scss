@@ -1,0 +1,107 @@
+@use "../../styles/media-breackpoints" as *;
+
+.contacts {
+  flex-grow: 1;
+  .contactsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    .contactsArticle {
+      max-width: 315px;
+
+      p {
+        margin-top: 26px;
+      }
+      .contactsWa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 244px;
+        height: 80px;
+        background-color: #494949;
+        border-radius: 5px;
+        margin-top: 60px;
+        -webkit-box-shadow: 0px -4px 0px 0px #323232 inset;
+        -moz-box-shadow: 0px -4px 0px 0px #323232 inset;
+        box-shadow: 0px -4px 0px 0px #323232 inset;
+        transition: all 0.4s ease-in-out;
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          .contactsWaName {
+            font-family: "Inter";
+            font-size: 18px;
+            letter-spacing: -1px;
+            line-height: 18px;
+            color: white;
+          }
+
+          .contactsWaPhone {
+            font-family: "Inter";
+            font-size: 12px;
+            letter-spacing: -1px;
+            line-height: 17px;
+            color: #636363;
+            margin-top: 2px;
+            transition: all 0.4s ease-in-out;
+          }
+        }
+        img {
+          // filter: brightness(1);
+          margin-right: 29px;
+        }
+
+        &:hover {
+          background-color: #636363;
+          .contactsWaPhone {
+            color: #a0a0a0;
+          }
+        }
+      }
+    }
+
+    .contactsBg {
+      width: 60%;
+    }
+  }
+}
+
+@include mq(laptop-l) {
+  .contacts {
+    .contactsContainer {
+      justify-content: center;
+      .contactsArticle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          text-align: center;
+        }
+        .contactsWa {
+          div {
+            .contactsWaName {
+            }
+
+            .contactsWaPhone {
+            }
+          }
+          img {
+          }
+
+          &:hover {
+            .contactsWaPhone {
+            }
+          }
+        }
+      }
+
+      .contactsBg {
+        display: none;
+      }
+    }
+  }
+}
